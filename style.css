@@ -225,5 +225,43 @@ canvas#p{position:fixed;inset:0;z-index:-2;opacity:.4}footer{padding:26px 0;colo
 .contact-form input:focus,
 .contact-form textarea:focus{border-color:#7c56ff}
 .form-status{display:block;margin-top:10px;color:#9bb0cf;font-weight:700}
+.thankyou-title {
+  text-align: center;
+  font-size: 2rem;          /* to hơn rõ */
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffb6ff, #8acbff, #b6ffdf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 300%;
+  animation: gradientFlow 5s ease infinite;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Hiệu ứng lấp lánh chuyển màu */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Nội dung bên dưới */
+.contact-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #d0d8ff;
+  margin-top: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+/* Khi hiện ra */
+.reveal.show .contact-message {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
